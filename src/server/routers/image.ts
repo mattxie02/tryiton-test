@@ -10,8 +10,10 @@ export const imageRouter = router({
   all: procedure.query(async () => {
     try {
       const result = await unsplashAPI.photos.getRandom({ query: 'dog', orientation: 'landscape', count: 10 });
+      console.log('info', result.errors);
       return result.errors ? [] : toArray(result.response);
     } catch (e) {
+      console.log('error', e);
       return [];
     }
   }),
