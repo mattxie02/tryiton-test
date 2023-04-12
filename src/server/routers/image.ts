@@ -9,11 +9,9 @@ const toArray = (result: any) => {
 export const imageRouter = router({
   all: procedure.query(async () => {
     try {
-      const result = await unsplashAPI.photos.getRandom({ query: 'dog', orientation: 'landscape', count: 50 });
-      console.log('info', result.errors);
+      const result = await unsplashAPI.photos.getRandom({ query: 'dog', orientation: 'landscape', count: 25 });
       return result.errors ? [] : toArray(result.response);
     } catch (e) {
-      console.log('error', e);
       return [];
     }
   }),
