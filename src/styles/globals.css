@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+.simple-button {
+  text-transform: uppercase;
+  font-weight: 700;
+  border-color: #000;
+  border-width: 1px;
+  display: inline-block;
+  text-align: center;
+  transition: all .2s ease 0s;
+  box-shadow: 5px 5px #004971;
+  background-color: #fff;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.simple-button:hover {
+  transform: translate(5px,5px);
+  background-color: #000;
+  color: #fff;
+  box-shadow: 0 0;
+}
+
+.simple-button:active {
+  transform: translate(8px,8px);
+  box-shadow: 3px 2px 22px 1px rgba(0,0,0,.24);
+}
